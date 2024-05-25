@@ -1,0 +1,123 @@
+<aura:component controller="RecaptchaDemo" implements="forceCommunity:availableForAllPageTypes" access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+    <aura:handler name="render" value="{!this}" action="{!c.onRender}" />
+    <aura:attribute name="recaptchaResponse" type="String" />
+    
+    
+    
+ 
+        <!--
+        <div style="width: 648.75px;
+                    height: 648.75px;
+                    position: absolute;
+                    background: radial-gradient(circle, rgb(255 182 193 / 66%) 0%, rgb(255 182 193 / -11%) 67%);
+                    border-radius: 50%;
+                    top: 12px;
+                    left: 746px;">
+        </div>
+        
+         <div style="width: 648.75px;
+                    height: 648.75px;
+                    position: absolute;
+                    background: radial-gradient(circle, rgba(155, 167, 255, 1) 0%, rgba(155, 167, 255, 0) 70%);
+                    border-radius: 50%;
+                    top: 12px;
+                    left: 490px;">
+        </div>
+        -->
+     
+        
+        
+        <form style="width: 100%;
+                    display: flex;
+                     padding: 30px 65px;
+                     border: 2px solid;
+					border-image-source: linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0%, #FFFFFF 44.5%);
+                     border-radius:20px;
+                     background: linear-gradient(270deg, rgba(255, 255, 255, 0.4) 57.5%, rgba(255, 255, 255, 0.36) 100%);
+                     border: 2px solid;
+                        border-image-source: linear-gradient(243.45deg, #00D3E1 16.03%, #591CDA 52.54%, #F23C88 89.04%);
+					 flex-direction: column;
+                    gap: 14px;" action="https://test.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&amp;orgId=00DUB000001DLZA"
+            method="POST">
+
+            <input type="hidden" name="oid" value="00DUB000001DLZA"/>
+            <input type="hidden" name="retURL" value="https://technopark--diaspora.sandbox.preview.salesforce-experience.com/eTechnopark/s/" />
+            <div style="display: flex;
+                        gap: 20px;">
+                <div style="width: 50%;">
+                    <input style="  width: 100%;
+                                    padding: 10px 10px;
+                                  
+                                    border: none;
+                                    background: transparent;
+                                    border-bottom: 1px solid #80808030;
+                                    " 
+                           required="true"
+                           placeholder="Nom" id="last_name" maxlength="80" name="last_name" size="20" type="text"/>
+                </div>
+                <div style="width: 50%;">
+                    <input style="  width: 100%;
+                                    padding: 10px 10px;
+                                    border: none;
+                                    background: transparent;
+                                    border-bottom: 1px solid #80808030;
+                                    " 
+                           required="true"
+                           placeholder="Prénom" id="first_name" maxlength="40" name="first_name" size="20" type="text"/>
+                </div>
+            </div>
+
+            <div style="display: flex;
+                        gap: 20px;">
+                <div style="width: 50%;">
+                    <input style="  width: 100%;
+                                    padding: 10px 10px;
+                                    border: none;
+                                    background: transparent;
+                                    border-bottom: 1px solid #80808030;
+                                    " 
+                           			required="true"
+                           			placeholder="Adresse e-mail" id="email" maxlength="80" name="email" size="20" type="text"/>
+                </div>
+                <div style="width: 50%;">
+                     <input style="  width: 100%;
+                                    padding: 10px 10px;
+                                    border: none;
+                                    background: transparent;
+                                    border-bottom: 1px solid #80808030;
+                                    "  
+                            required="true"
+                            placeholder="Téléphone mobile" id="phone" maxlength="40" name="phone" size="20" type="text"/>
+                </div>
+            </div>
+
+            <div style="width: 100%;">
+                <textarea style=" width: 100%;   
+                                 padding: 10px 10px;
+                                    border: none;
+                                    background: transparent;
+                                    border-bottom: 1px solid #80808030;
+                                    "  
+                          required="true"
+                          placeholder="Message" name="description"></textarea>
+            </div>
+
+            <div style="display: flex;
+                        width:100%;		     
+                        justify-content: space-between;">
+                   
+                <div class="captcha-submit" style="border-radius:20px;" id="recaptchaCheckbox"></div>
+                
+                <div class="button-submit-wrapper">
+                    <span class="button-parent">	
+                	<lightning:button class="button-submit"  aura:id="myButton" type="submit" label="Envoyer &#8594;" onclick="{!c.doSubmit}" disabled="true" />
+                    </span>
+                </div>
+             </div>
+
+        </form>
+
+
+    
+</aura:component>

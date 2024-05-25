@@ -1,0 +1,31 @@
+.THIS {
+}
+
+.THIS .captcha-submit{
+    
+}
+
+.THIS .button-submit{
+    	border-radius: 50px;
+    /* border: 2px solid; */
+    padding: 0 55px;
+    color: #2E3776;
+    background: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.THIS .button-submit-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.THIS .button-parent{
+        border-radius: 50px;
+    /* border: 2px solid; */
+    padding: 2px;
+    /* background: red; */
+    background: linear-gradient(243.45deg, #00D3E1 16.03%, #591CDA 52.54%, #F23C88 89.04%);
+}
